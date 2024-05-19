@@ -1,0 +1,490 @@
+use('peliculas_disney');
+db.peliculas.insertMany([
+    {
+        "titulo": "La sirenita",
+        "añoLanzamiento": 1989,
+        "decada": "Década de los 80", 
+        "genero": "Animación",
+        "duracion": 79,
+        "director": ["John Musker", "Ron Clements"], 
+        "descripcion": "Ariel, hija del rey Tritón, es la princesa de las sirenas. Está a punto de celebrarse su fiesta de cumpleaños y su mayor ilusión es poder conocer a los seres humanos. Con la ayuda de la bruja Úrsula, Ariel consigue subir a la superficie, donde salva de morir ahogado a un hermoso príncipe, cuyo barco acaba de naufragar, del que se enamora perdidamente.", 
+        "valoracion": 5
+    },
+    {
+        "titulo": "Alicia en el país de las maravillas",
+        "añoLanzamiento": 1951,
+        "decada": "Década de los 50", 
+        "genero": "Animación",
+        "duracion": 75,
+        "director": ["Clyde Geronimi", "Halmiton Luske", "Wilfred Jackson"], 
+        "descripcion": "Historia de magia y fantasía en la que la joven Alicia se sumerge en el sorprendente País de las Maravillas y conoce a extraordinarios personajes como Tweedledee y Tweedledum, el Sombrerero Loco, La Reina de Corazones y el frenético Conejo Blanco.", 
+        "valoracion": 5
+    },
+    {
+        "titulo": "Los aristogatos",
+        "añoLanzamiento": 1970,
+        "decada": "Década de los 70", 
+        "genero": "Animación",
+        "duracion": 75,
+        "director": ["Wolfgang Reitherman"], 
+        "descripcion": "Año 1910. En París, una anciana millonaria y excéntrica lleva una vida feliz con sus gatos en su enorme mansión, con la única ayuda de su fiel mayordomo Edgar. Allí, la gatita Duquesa vive con sus tres traviesos cachorros, sin saber que Edgar planea acabar con todos los gatos para convertirse en el único heredero de la enorme fortuna de la anciana, Madame Bonfamille. Con este propósito, los abandona en un lugar remoto, pero quiere la suerte que Duquesa se encuentren con Thomas O’Malley, un gato vagabundo y mundano. Desde el principio, O’Malley, atraído por la elegancia de Duquesa, se propone ayudarla a regresar a casa de Madame Bonfamille, aunque para ello tenga que enfrentarse con todos los peligros de la gran ciudad. ", 
+        "valoracion": 4
+    },
+    {
+        "titulo": "El libro de la selva",
+        "añoLanzamiento": 1967,
+        "decada": "Década de los 60", 
+        "genero": "Animación",
+        "duracion": 78,
+        "director": ["Wolfgang Reitherman"], 
+        "descripcion": "Tras la muerte de sus padres, Mowgli, un niño de apenas dos años, queda abandonado en la selva y es recogido por una manada de lobos. En el seno de la manada, Mowgli es criado como un lobo más hasta que crece y empieza a desenvolverse por sí mismo en la selva.", 
+        "valoracion": 3
+    },
+    {
+        "titulo": "El rey León",
+        "añoLanzamiento": 1994,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 85,
+        "director": ["Rob Minkoff", "Roger Allers"], 
+        "descripcion": "La sabana africana es el escenario en el que tienen lugar las aventuras de Simba, un pequeño león que es el heredero del trono. Sin embargo, al ser injustamente acusado por el malvado Scar de la muerte de su padre, se ve obligado a exiliarse. Durante su destierro, hará buenas amistades e intentará regresar para recuperar lo que legítimamente le corresponde.", 
+        "valoracion": 4
+    },
+    {
+        "titulo": "Aladdin",
+        "añoLanzamiento": 1992,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 87,
+        "director": ["John Musker", "Ron Clements"], 
+        "descripcion": "Basada en el famoso cuento 'Aladino y la lámpara maravillosa', la trama se sitúa en el exótico paisaje del mítico reino árabe de Agrabah. Aladdin es un ingenioso joven que, a pesar de vivir en un estado de extrema pobreza, sueña con casarse con la bella hija del sultán, la princesa Yasmin. El destino interviene cuando el astuto visir del Sultán, Yafar, recluta a Aladdin para que le ayude a recuperar una lámpara mágica de las profundidades de la Cueva de las Maravillas. El joven encuentra la lámpara, en la que vive un genio que concede tres deseos a quien lo libere.", 
+        "valoracion": 3
+    },
+    {
+        "titulo": "Lilo & Stitch",
+        "añoLanzamiento": 2002,
+        "decada": "Década de los 2000", 
+        "genero": "Animación",
+        "duracion": 90,
+        "director": ["Dean DeBlois","Chris Sanders"], 
+        "descripcion": "Lilo, una niña hawaiana que se siente sola, decide adoptar un 'perro' muy feo al que llama Stitch, que podría ser la compañía perfecta si no fuera en realidad el fruto de un experimento genético que se ha escapado de un planeta alienígena y que ha aterrizado en la tierra por casualidad. Con su amor y su inquebrantable fe en el 'ohana' (el concepto hawaiano de la familia), Lilo termina conquistando el corazón de Stitch y le ofrece algo que el original perro nunca pensó tener: un hogar.", 
+        "valoracion": 1
+    },
+    {
+        "titulo": "Buscando a Nemo",
+        "añoLanzamiento": 2003,
+        "decada": "Década de los 2000", 
+        "genero": "Animación",
+        "duracion": 101,
+        "director": ["Andrew Stanton", "Lee Unkrich"], 
+        "descripcion": "El pececillo Nemo, que es hijo único, es muy querido y protegido por su padre. Después de ser capturado en un arrecife australiano va a parar a la pecera de la oficina de un dentista de Sidney. Su tímido padre emprenderá una peligrosa aventura para rescatarlo. Pero Nemo y sus nuevos amigos tienen también un astuto plan para escapar de la pecera y volver al mar.", 
+        "valoracion": 4
+    },
+    {
+        "titulo": "Mulán",
+        "añoLanzamiento": 1998,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 88,
+        "director": ["Barry Cook", "Tony Bancroft"], 
+        "descripcion": "Mulan, una joven china hija única de la familia Fa, en lugar de buscar novio, como sus amigas, trata por todos los medios de alistarse en el ejército imperial para evitar que su anciano padre sea llamado a filas para defender al Emperador del acoso de los Hunos. Cuando el emisario imperial lleva a cabo la orden de reclutar a los varones de todas las familias, Mulan se hará pasar por soldado y se someterá a un duro entrenamiento hasta hacerse merecedora de la estima y de la confianza del resto de su escuadrón.", 
+        "valoracion": 5
+    },
+    {
+        "titulo": "Peter Pan",
+        "añoLanzamiento": 1953,
+        "decada": "Década de los 50", 
+        "genero": "Animación",
+        "duracion": 77,
+        "director": ["Clyde Geronimi", "Hamilton Luske", "Wilfred Jackson", "Jack Kinney"], 
+        "descripcion": "Wendy y sus hermanos vivirán fantásticas aventuras cuando Peter Pan, el héroe de sus cuentos, les guía hacia el mágico mundo de Nunca Jamás junto a su inseparable Campanilla. En su viaje a “la segunda estrella a la derecha”, conocerán la guarida secreta de Peter y a los traviesos Niños Perdidos y tendrán que enfrentarse con el famoso Capitán Garfio y sus piratas.", 
+        "valoracion": 2
+    },
+    {
+        "titulo": "101 dálmatas",
+        "añoLanzamiento": 1961,
+        "decada": "Década de los 60", 
+        "genero": "Animación",
+        "duracion": 79,
+        "director": ["Wolfgang Reitherman", "Clyde Geronimi", "Hamilton Luske"], 
+        "descripcion": "Pongo y Perdita, los dálmatas protagonistas, son una feliz pareja canina que vive rodeada de sus cachorros y con sus amos Roger y Anita. Pero su felicidad está amenazada. Cruella de Ville, una pérfida mujer que vive en una gran mansión y adora los abrigos de pieles, se entera de que los protagonistas tienen quince cachorros dálmatas. Entonces, la idea de secuestrarlos para hacerse un exclusivo abrigo de pieles se convierte en una obsesión enfermiza. Para hacer realidad su sueño contrata a dos ladrones. ", 
+        "valoracion": 1
+    },
+    {
+        "titulo": "Coco",
+        "añoLanzamiento": 2017,
+        "decada": "Década de los 2000", 
+        "genero": "Animación",
+        "duracion": 109,
+        "director":["Lee Unkrich","Adrián Molina"], 
+        "descripcion": "Miguel es un joven con el sueño de convertirse en leyenda de la música a pesar de la prohibición de su familia. Su ídolo es Ernesto de la Cruz, el músico y cantante más famoso de México. La pasión de Miguel le llevará a adentrarse en la 'Tierra de los Muertos', donde conocerá su verdadero legado familiar.", 
+        "valoracion": 4
+    },
+    {
+        "titulo": "Frozen",
+        "añoLanzamiento": 2013,
+        "decada": "Década de los 2000", 
+        "genero": "Animación",
+        "duracion": 98,
+        "director": ["Chris Buck", "Jennifer Lee"], 
+        "descripcion": "Cuando una profecía condena a un reino a vivir un invierno eterno, la joven Anna, el temerario montañero Kristoff y el reno Sven emprenden un viaje épico en busca de Elsa, hermana de Anna y Reina de las Nieves, para poner fin a un gélido hechizo... Adaptación libre del cuento 'La reina de las nieves'.", 
+        "valoracion": 1
+    },
+    {
+        "titulo": "Toy Story",
+        "añoLanzamiento": 1995,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 80,
+        "director": ["John Lasseter"], 
+        "descripcion": "Los juguetes de Andy, un niño de 6 años, temen que haya llegado su hora y que un nuevo regalo de cumpleaños les sustituya en el corazón de su dueño. Woody, un vaquero que ha sido hasta ahora el juguete favorito de Andy, trata de tranquilizarlos hasta que aparece Buzz Lightyear, un héroe espacial dotado de todo tipo de avances tecnológicos. Woody es relegado a un segundo plano. Su constante rivalidad se transformará en una gran amistad cuando ambos se pierden en la ciudad sin saber cómo volver a casa.", 
+        "valoracion": 4
+    },
+    {
+        "titulo": "Blancanieves y los siete enanitos",
+        "añoLanzamiento": 1937,
+        "decada": "Década de los 40", 
+        "genero": "Animación",
+        "duracion": 83,
+        "director": ["David Hand"], 
+        "descripcion": "La malvada madrastra de Blancanieves decide deshacerse de ella porque no puede soportar que la belleza de la joven sea superior a la suya. Sin embargo, Blancanieves consigue salvarse y se refugia en la cabaña de los siete enanitos. A pesar de todo, su cruel madrastra consigue encontrarla y la envenena con una manzana. Pero la princesa no está muerta, sólo dormida, a la espera de que un Príncipe Azul la rescate. ", 
+        "valoracion": 2
+    },
+    {
+        "titulo": "Tarzán",
+        "añoLanzamiento": 1999,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 84,
+        "director": ["Kevin Lima","Chris Buck"], 
+        "descripcion": "Cuando Kala, una gorila hembra, encuentra un niño huérfano en la jungla, decide adoptarlo como su propio hijo a pesar de la oposición de Kerchak, el jefe de la manada. Junto a Terk, un gracioso mono y Tantor, un elefante algo neurótico, Tarzán crecerá en la jungla desarrollando los instintos de los animales y aprendiendo a deslizarse entre los árboles a velocidad de vértigo. Pero cuando una expedición se adentra en la jungla y Tarzán conoce a Jane, descubrirá quién es realmente y cuál es el mundo al que pertenece... ",
+        "valoracion": 1
+    },
+    {
+        "titulo": "Pocahontas",
+        "añoLanzamiento": 1995,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 78,
+        "director": ["Mike Gabriel", "Eric Goldberg"], 
+        "descripcion": "Pocahontas, la hija del Jefe Powhatan, vigila la llegada de un gran grupo de colonos ingleses, guiados por el ambicioso gobernador Radcliff y el valiente capitán John Smith. Con su juguetón compañero Meeko, un travieso mapache, y con Flit, un alegre pájaro, Pocahontas entabla una fuerte amistad con el Capitán Smith. Pero cuando empiezan a surgir tensiones entre las dos culturas, Pocahontas recurre a la sabiduría de la Abuela Sauce para encontrar una manera de lograr la paz entre su pueblo y los conquistadores.",
+        "valoracion": 4
+    },
+    {
+        "titulo": "La dama y el vagabundo",
+        "añoLanzamiento": 1955,
+        "decada": "Década de los 50", 
+        "genero": "Animación",
+        "duracion": 75,
+        "director": ["Clyde Geronimi", "Hamilton Luske", "Wilfred Jackson"], 
+        "descripcion": "Reina es una preciosa perrita de pura raza que vive feliz en su hogar. Isabel y Jaime, la miman mucho y ella corresponde feliz a sus cuidados. Sin embargo, el día en que sus dueños deciden hacer un viaje, la vida de Reina se ve alterada; la llegada de la tía Clara con sus gatos no provoca más que sobresaltos. Menos mal que conoce a Golfo, un perro vagabundo muy simpático",
+        "valoracion": 2
+    },
+    {
+        "titulo": "La bella y la bestia",
+        "añoLanzamiento": 1991,
+        "decada": "Década de los 90", 
+        "genero": "Animación",
+        "duracion": 85,
+        "director": ["Gary Trousdale","Kirk Wise"], 
+        "descripcion": "Una hermosa joven llamada Bella acepta alojarse en un castillo con una bestia a cambio de la libertad de su padre. La bestia es, en realidad, un príncipe encantado. Para romper el hechizo, deberá ganarse el amor de una preciosa dama antes de que caiga el último pétalo de una rosa encantada.",
+        "valoracion": 1
+    },
+    {
+        "titulo": "Monstruo S.A",
+        "añoLanzamiento": 2001,
+        "decada": "Década de los 2000", 
+        "genero": "Animación",
+        "duracion": 88,
+        "director": ["Pete Docter", "Lee Unkrich", "David Silverman"], 
+        "descripcion": "Monsters Inc. es la mayor empresa de miedo del mundo, y James P. Sullivan es uno de sus mejores empleados. Asustar a los niños no es un trabajo fácil, ya que todos creen que los niños son tóxicos y no pueden tener contacto con ellos. Pero un día una niña se cuela sin querer en la empresa, provocando el caos.",
+        "valoracion": 5
+    }
+])
+db.personajes.insertMany([
+    {
+        "nombre": "Ariel", 
+        "funcion": "Salir a la superficie para explorar el mundo humano", 
+        "descripcion":"Ariel es la protagonista de la película y es una joven sirena que anhela explorar el mundo de los humanos. Se siente atraída por la superficie y colecciona objetos humanos. Es valiente, curiosa y apasionada. Es valiente, curiosa y apasionada.",
+        "titulo": "La sirenita"
+    },
+    {
+        "nombre": "Úrsula", 
+        "funcion": "Manipula a Ariel para lograr sus propios objetivos.", 
+        "descripcion":" Es una bruja del mar que ansía venganza contra el reino del mar.Es astuta, poderosa y malvada.",
+        "titulo": "La sirenita"
+    },
+    {
+        "nombre": "Conejo Blanco", 
+        "funcion": "Llevar a Alicia al país de las maravillas", 
+        "descripcion":"Es el primer personaje que Alicia encuentra en el País de las Maravillas. Es nervioso, obsesionado con el tiempo y a menudo parece estar en una prisa.",
+        "titulo": "Alicia en el país de las maravillas"
+    },
+    {
+        "nombre":"El sombrero loco", 
+        "funcion":" Ser un anfitrión en el té del Sombrerero Loco, un evento caótico y surrealista en el País de las Maravillas", 
+        "descripcion": "Personaje excéntrico que Alicia encuentra en su vaije. Es excéntrico, impredecible y a menudo parece vivir en su propio mundo.",
+        "titulo": "Alicia en el país de las maravillas"
+    },
+    {
+        "nombre":"Thomas O'Malley", 
+        "funcion":"Guiar y proteger a Duquesa y sus gatitos en su viaje de regreso a casa.", 
+        "descripcion":"Es un gato callejero simpático, valiente y con un toque de picardía. ",
+        "titulo": "Los aristogatos"
+    },
+    {
+        "nombre":"Madame Adelaide Bonfamille", 
+        "funcion":"Mujer adinerada amante de los gatos que cuida de duquesa.", 
+        "descripcion":"Es la dueña de duquesa y los gatitos",
+        "titulo": "Los aristogatos"
+    },
+    {
+        "nombre": "Baloo", 
+        "funcion": "Protege y guia a Mowgli mientras navega por la selva.", 
+        "descripcion":"Es un oso pardo que se hace amigo de Mowgli. Es visto como un personaje amistoso, relajado y lleno de sabiduría. Le enseña a Mowgli la importancia de disfrutar la vida y seguir su propio camino.",
+        "titulo": "El libro de la selva"
+    },
+    {
+        "nombre":"Mowgli", 
+        "funcion":"Aprender las reglas de la selva y enfrentarse a los desafíos que presenta.", 
+        "descripcion":"Mowgli es un niño humano criado por lobos en la selva después de ser encontrado por Bagheera, una pantera negra. Es curioso, valiente y tiene un fuerte vínculo con la naturaleza.",
+        "titulo": "El libro de la selva"
+    },
+    {
+        "nombre":"Scar", 
+        "funcion":"Usurpar el trono y gobernar la Sabana con tiranía y crueldad", 
+        "descripcion":"Scar es astuto, manipulador y está obsesionado con el poder.",
+        "titulo": "El rey León"
+    },
+    {
+        "nombre":"Nala", 
+        "funcion":"Apoyar y ayudar a Simba en su viaje de regreso a la Sabana.", 
+        "descripcion":"Amiga de la infancia y eventualmente la compañera de Simba. Nala es valiente, leal y tiene una gran determinación.",
+        "titulo": "El rey León"
+    },
+    {
+        "nombre":"Lilo", 
+        "funcion":"Es el corazón y el alma de la película, aportando amor, compasión y un toque de caos a la vida de su familia.", 
+        "descripcion":"Es la protagonista de la historia, una niña hawaiana que vive con su hermana mayor Nani. Lilo es única, creativa y valiente, pero también tiene problemas para encajar y a menudo se siente sola.",
+        "titulo": "Lilo & Stitch"
+    },
+    {
+        "nombre":"Stitch", 
+        "funcion":"Ser el compañero de aventuras de Lilo y aprender a lo que es 'ohana' (familia).", 
+        "descripcion":"Es un experimento genético alienígena creado para ser destructivo, pero que termina siendo adoptado por Lilo como su mascota.Es travieso, curioso y a menudo causa problemas, pero también tiene un corazón tierno y busca un sentido de pertenencia.",
+        "titulo": "Lilo & Stitch"
+    },
+    {
+        "nombre":"Genio", 
+        "funcion":"Es el aliado y mentor de Aladdin y le da consejos a lo largo de la pelicula", 
+        "descripcion":" Es un genio mágico que habita en una lámpara mágica y que tiene el poder de conceder tres deseos a quien lo libere. Es divertido, extravagante y tiene un gran corazón.",
+        "titulo": "Aladdin"
+    },
+    {
+        "nombre":"Dory", 
+        "funcion":"Es la de ser la compañera de viaje de Marlin", 
+        "descripcion":"Es un pez cirujano azul que Marlin conoce en su viaje para encontrar a Nemo. Dory sufre de pérdida de memoria a corto plazo, lo que a menudo lleva a situaciones divertidas y desafiantes. A pesar de su defecto, es amable, optimista y tiene un gran corazón.",
+        "titulo": "Buscando a nemo"
+    },
+    {
+        "nombre":"Mushu", 
+        "funcion": "Asesora a Mulán para ayudarla durante su estancia en el ejército.", 
+        "descripcion":"Es un pequeño dragón guardián de la familia de Mulán enviado por los ancestros. Es atrevido, gracioso y a menudo actúa como el confidente y amigo de Mulán.",
+        "titulo": "Mulán"
+    },
+    {
+        "nombre":"Capitán Li Shang", 
+        "funcion":"Entrena a los soldados y los lidera en la batalla contra los hunos. ", 
+        "descripcion":"Li Shang es valiente, disciplinado y honorable. A lo largo de la película, desarrolla una estrecha relación con Mulán, sin saber que ella es una mujer.",
+        "titulo": "Mulán"
+    },
+    {
+        "nombre":"Campanilla", 
+        "funcion": "Protege a Peter y a sus compañeros de aventuras", 
+        "descripcion": "Es el hada traviesa y leal de Peter Pan. Es celosa, terca y a menudo muestra un afecto especial por Peter. Aunque no puede hablar, se comunica a través de tintineos y gestos.",
+        "titulo": "Peter Pan"
+    },
+    {
+        "nombre":"Cruella de Vil", 
+        "funcion": "Intenta robar a los cachorros de dálmata para hacerse un abrigo con sus pieles.", 
+        "descripcion":"Mujer obsesionada con la moda y las pieles. Cruella es extravagante, egoísta y está dispuesta a hacer cualquier cosa para conseguir lo que quiere, incluido el secuestro de cachorros inocentes.",
+        "titulo": "101 dálmatas"
+    },
+    {
+        "nombre":"Miguel Rivera", 
+        "funcion": " Perseguir sus sueños relacionados con su pasión por la música y descubrir la verdad sobre su ancestro familiar.", 
+        "descripcion":"Un niño mexicano de 12 años que sueña con convertirse en músico, a pesar de la prohibición de la música en su familia. Es valiente, determinado y tiene un profundo amor por la música y su familia.",
+        "titulo": "Coco"
+    },
+    {
+        "nombre":"Elsa", 
+        "funcion":" Aceptar y aprender a controlar su poder, así como reconciliarse con su hermana Anna.", 
+        "descripcion":"Es la Reina de Arendelle.Tiene el poder de controlar el hielo y la nieve, pero lucha por controlarlo debido al miedo a herir a las personas que ama.",
+        "titulo": "Frozen"
+    }
+    ,
+    {
+        "nombre":"Buzz Lightyear", 
+        "funcion":"Pretende ser el nuevo juguete que desafía la posición de Woody como el favorito de Andy y enseñarle a Woody lecciones importantes sobre la amistad y la aceptación.", 
+        "descripcion":"Es un juguete espacial que llega a la vida de Andy como un nuevo regalo de cumpleaños. Al principio, cree ser un verdadero guardián espacial y no comprende que es solo un juguete. Es valiente, decidido y tiene un fuerte sentido del deber.",
+        "titulo": "Toy Story"
+    },
+    {
+        "nombre":"Lumière", 
+        "funcion":"Brinda comodidad y entretenimiento a los huéspedes del castillo y ayuda a Bella a adaptarse a su nueva vida.", 
+        "descripcion":"Candelabro encantado que sirve como mayordomo en el castillo de la Bestia. Es amigable, encantador y le gusta ser el centro de atención.",
+        "titulo": "Bella y Bestia"
+    },
+    {
+        "nombre":"Boo (Mary)", 
+        "funcion": "Acompaña a Mike y Sulley en su viaje hasta que estos consiguen devolverla a su habitación.", 
+        "descripcion":"Boo es una niña humana de dos años que se escapa de su habitación y termina en el mundo de los monstruos. Aunque al principio asusta a Sulley y Mike, pronto se convierte en una parte importante de sus vidas. Boo es adorable, curiosa y tiene un vínculo especial con Sulley.",
+        "titulo": "Mostruos S.A"
+    },
+    {
+        "nombre":"Pocahontas", 
+        "funcion":"Ser un puente entre su pueblo y los colonizadores ingleses, así como desafiar las expectativas de su sociedad y encontrar su propio camino.", 
+        "descripcion":"Es una joven nativa americana perteneciente a la tribu Powhatan. Pocahontas es valiente, independiente y tiene una profunda conexión con la naturaleza y su entorno.",
+        "titulo": "Pocahontas"
+    },
+    {
+        "nombre":"La Reina Grimhilde", 
+        "funcion":"Intentar asesinar a Blancanieves y asegurar su propio poder y belleza, lo que la lleva a transformarse en una bruja para lograr su objetivo.", 
+        "descripcion":"Obsesionada con ser 'la más bella del reino', la Reina Grimhilde se enfurece cuando el espejo mágico le revela que Blancanieves es más hermosa que ella.",
+        "titulo": "Blancanieves"
+    },
+    {
+        "nombre":"Jane Porter", 
+        "funcion":"Amor de tarzán y ayudarlo a adaptarse a la civilización humana, al tiempo que aprende a apreciar y respetar la vida en la selva.", 
+        "descripcion":"Es una joven exploradora británica que llega a la selva junto con su padre y su expedición científica. Es curiosa, inteligente y tiene una pasión por descubrir y comprender nuevas culturas y entornos.",
+        "titulo": "Tarzán"
+    },
+    {
+        "nombre":"Dama", 
+        "funcion":"La historia se centra en su aventura cuando conoce al Vagabundo y experimenta una vida diferente fuera de su hogar.", 
+        "descripcion":" La Dama es una cocker spaniel mimada y consentida que vive en un hogar de clase alta. Es elegante, cariñosa y tiene una personalidad gentil.",
+        "titulo": "La Dama y el Vagabundo"
+    },
+]);
+db.canciones.insertMany([
+    {
+        "titulo": "Bajo el mar",
+        "pelicula": "La sirenita", 
+        "interpretes": ["Sebastian", "Ariel"],
+        "reproducciones": 78000213
+    },
+    {
+        "titulo":"Feliz no cumpleaños", 
+        "pelicula":"Alicia en el país de las maravillas", 
+        "interpretes": ["El sombrerero loco", "sus amigos"],
+        "reproducciones": 45030987
+    },
+    {
+        "titulo":"Todos quieren ser un gato Jazz",
+        "pelicula":"Los aristogatos", 
+        "interpretes": ["Thomas O'Malley", "Gatos callejeros"],
+        "reproducciones": 33123564
+    },
+    {
+        "titulo":"¿Quiero ser como tú?", 
+        "pelicula":"Libro de la Selva",
+        "interpretes": ["Mowgli", "Rey Louie"],
+        "reproducciones": 85127883
+    },
+    {
+        "titulo": "Hakuna Matata", 
+        "pelicula":"El rey León", 
+        "interpretes":["Timón", "Pumba"],
+        "reproducciones": 91430298
+    },
+    {
+        "titulo":"Un amigo como yo", 
+        "pelicula":"Aladdin", 
+        "interpretes":["Genio de la lámpara"],
+        "reproducciones": 66112114
+    },
+    {
+        "titulo":"He Mele no Lilo", 
+        "pelicula":"Lilo & Stitch", 
+        "interpretes":[""],
+        "reproducciones": 5123321
+    },
+    {
+        "titulo": "A través del amr",
+        "pelicula":"Buscando a Nemo", 
+        "personajes":[""],
+        "reproducciones": 21453663
+    },
+    {
+        "titulo": "Reflejo",
+        "pelicula":"Mulán", 
+        "personajes":["Mulán"],
+        "reproducciones": 47130761
+    },
+    {
+        "titulo": "Volarás, volarás, volarás",
+        "pelicula":"Peter Pan", 
+        "personajes":["Peter Pan", "Niños perdidos"],
+        "reproducciones": 72221654
+    },
+    {
+        "titulo": "Cruella de Vil",
+        "pelicula":"101 dálmatas", 
+        "personajes":["Roger"],
+        "reproducciones": 89013454
+    },
+    {
+        "titulo": "Recuérdame",
+        "pelicula":"Coco", 
+        "personajes":["Miguel", "Mamá Coco"],
+        "reproducciones": 78000213
+    },
+    {
+        "titulo": "Libre soy",
+        "pelicula":"Frozen", 
+        "personajes":["Elsa"],
+        "reproducciones": 68757243
+    },
+    {
+        "titulo": "Heigh-Ho",
+        "pelicula":"Blancanieves y los sietes enanitos", 
+        "personajes":["Feliz", "Gruñón", "Dormilón", "Tímido", "Mocoso", "Sabio", "Mudito"],
+        "reproducciones": 818122496
+    },
+    {
+        "titulo": "Hijo de un hombre",
+        "pelicula":"Tarzán", 
+        "personajes":["Roger"], 
+        "reproducciones": 93435289
+    },
+    {
+        "titulo": "Colores en el viento",
+        "pelicula":"Pocahontas", 
+        "personajes":["Pocahontas"],
+        "reproducciones": 54878987
+    },
+    {
+        "titulo": "Bella noche",
+        "pelicula":"La dama y el vagabundo", 
+        "personajes":["Tony, dueño del restaurante italiano"],
+        "reproducciones": 346122357
+    },
+    {
+        "titulo": "Bella y bestia son",
+        "pelicula":"La bella y la bestia", 
+        "personajes":["Bella", "Bestia"],
+        "reproducciones": 85444980
+    },
+    {
+        "titulo": "Si no te tuviera a tí",
+        "pelicula":"Monstruos S.A", 
+        "personajes":["Mike Wazowski","Sulley"],
+        "reproducciones": 20001676
+    },
+]);
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+use("peliculas_disney");
+
+//Búsquedas
+//Todas las peliculas disney de animación.
+/*db.peliculas.find({
+    "genero": "Animación"
+})*/
+
+//Películas lanzadas después del 2000
+/*db.peliculas.find({
+    "añoLanzamiento": {$gt:2000}
+})*/
+
+//Peliculas dirigidas por un director específico
+/*db.peliculas.find({
+    "director": {$eq: "Wolfgang Reitherman"}
+})*/
+
+//Encontrar los personajes principales de una pelicula
+/*db.personajes.find({
+    $and: [
+    {"titulo":"Mulán"}, 
+    {"nombre": "Mushu"}
+]})*/
+
+//Buscar canciones Disney interpretadas por un personaje específico
+/*db.canciones.find({
+    $and: [{"personajes": "Miguel"},{"personajes": "Mamá Coco"}]
+})*/
+
+//Obtener una lista de un director de una las películas y una decada concreta y ordenarlas por el titulo en orden alfabético
+/* db.peliculas.find({
+    $and: [
+        { $or: [{ "director": "Lee Unkrich" }] },
+        { "decada": "Década de los 2000" }
+    ]
+}).sort({ "titulo": 1 })*/
+
+
+//Agregaciones
+//Numero total de películas Disney en la base de datos
+/*db.peliculas.aggregate(
+    {$count: "peliculas"}
+)*/
+
+
+//Encontrar el género con más películas de disney
+/*db.peliculas.aggregate([
+    {
+        $group: {
+            _id: "$genero",
+            peliculas: { $push: "$titulo" }
+        }
+    },
+    {
+        $project: {
+             _id: 0,
+            genero: "$_id",
+            peliculas: 1
+        }
+    }
+])*/
+    
+//Agrupar las películas por década y contar cuántas hay en cada década.
+/*db.peliculas.aggregate([
+    {
+        $group: {
+            _id: "$decada",
+            totalPeliculas: { $sum: 1 }
+        }
+    }
+])*/
+
+//Calcular el promedio de duración de las peliculas
+/*db.peliculas.aggregate([
+    {
+        $group: {
+            "_id": null,
+            duracionPromedioPelicula: {"$avg": "$duracion"}
+        }
+    }
+])*/
+
+//Encontrar las canciones más populares de Disney y mostrar las cinco primeras
+/*db.canciones.aggregate([
+    {
+        $sort: {
+            "reproducciones":-1
+        }
+    },
+    {
+        $limit: 5
+    }
+])*/
+
+//Numero de películas que ha hecho cada director.
+db.peliculas.aggregate([
+    {
+        $unwind: "$director"
+    },
+    {
+        $group: {
+            "_id":"$director",
+            "peliculasDirector": {$sum: 1}
+        }
+    }
+])
